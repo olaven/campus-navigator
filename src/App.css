@@ -9,16 +9,6 @@
 }
 
 
-.Header
-{
-  display: flex; 
-}
-.Header h1
-{
-  padding-left: 20vw;  
-  font-size: 3em; 
-}
-
 .cards
 {
   display: flex; 
@@ -37,6 +27,11 @@
   border-width: 1px;  
   transform: scale(1.01); 
 }
+.CampusCard, .CampusCard * 
+{
+  /* Propagates click events to parent */ 
+  pointer-events: none;
+}
 .CampusCard h2
 {
   font-size: 2.5em; 
@@ -47,6 +42,7 @@
 
 .Campus
 {
+  position: absolute; 
   height: 100vh;
   width: 100vw; 
 }

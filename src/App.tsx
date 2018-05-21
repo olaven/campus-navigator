@@ -7,14 +7,14 @@ import {ICampus as ICampus} from './Interfaces/ICampus';
 // components
 import Campus from "./Components/Campus"; 
 import CampusCard from "./Components/CampusCard"; 
-import Header from './Components/Header'; 
+// import Header from './Components/Header'; // left out for now
 
 // images 
 import fjerdingen_image from "./Images/Campuses/fjerdingen.png"; 
 import kvadraturen_image from "./Images/Campuses/kvadraturen.png"; 
 import vulkan_image from "./Images/Campuses/vulkan.png"; 
 
-import logo from './Images/logo.png'; 
+// import logo from './Images/logo.png'; // not used when header is not used
 
 // all campuses in list
 const campuses: ICampus[] = 
@@ -31,7 +31,6 @@ class App extends React.Component
     return (
       <div className="App">
         <div id="first-page">
-          <Header image={logo} text="Trykk på ditt campus." />
           <div className="cards">{this.renderCampusCards()}</div>
         </div>
         <div id="second-page">
@@ -43,8 +42,9 @@ class App extends React.Component
 
   private onCardClicked(event: any) 
   {
-    alert(event.target.parentNode.id);
-    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+    const identifier = event.target.id; 
+    toggleCampus(identifier); 
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
   }
 
   private renderCampusCards() 
@@ -63,7 +63,7 @@ class App extends React.Component
   {
     return campuses.map(campus => 
     {
-      return <div id={campus.name} key={campus.name}>
+      return <div id={campus.name} className="campuses" key={campus.name}>
           <Campus title={campus.name} image={campus.image} />
         </div>;
     })
@@ -72,3 +72,21 @@ class App extends React.Component
 
 export default App ;
 
+
+/**
+ * Toggles which campus is visible to the user, based on the clicked card
+ */
+const toggleCampus = (identifier : string) => 
+{
+  const campusSections = Array.from(document.getElementsByClassName('campuses')); 
+  for(const campus of campusSections)
+  {
+    if(campus.id === identifier)
+    {
+      campus.setAttribute('style', 'visibility : visible');
+    } else
+    {
+      campus.setAttribute('style', 'visibility : hidden');
+    }
+  }
+}

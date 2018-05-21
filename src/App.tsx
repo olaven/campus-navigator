@@ -44,7 +44,7 @@ class App extends React.Component
   {
     const identifier = event.target.id; 
     toggleCampus(identifier); 
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    window.scrollTo({ top: window.outerHeight, behavior: "smooth" });
   }
 
   private renderCampusCards() 
@@ -81,12 +81,6 @@ const toggleCampus = (identifier : string) =>
   const campusSections = Array.from(document.getElementsByClassName('campuses')); 
   for(const campus of campusSections)
   {
-    if(campus.id === identifier)
-    {
-      campus.setAttribute('style', 'visibility : visible');
-    } else
-    {
-      campus.setAttribute('style', 'visibility : hidden');
-    }
+    campus.setAttribute("style", "display : " + (campus.id === identifier ? "block" : "none"));
   }
 }

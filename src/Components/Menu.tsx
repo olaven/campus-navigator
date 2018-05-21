@@ -1,10 +1,20 @@
 import * as React from 'react';
 
 
-class Menu extends React.Component {
+class Menu extends React.Component 
+{
     public render()
     {
-        return <div className="Menu">Hei</div>
+        return <div className="Menu">
+            <div>
+                {this.renderOptions()}
+            </div>
+        </div>
+    }
+
+    private renderOptions()
+    {
+        return "test"; 
     }
 }
 

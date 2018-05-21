@@ -4,6 +4,7 @@ interface ICampusCardProps {
     image: string;
     alt?: string; 
     text: string;
+    customClickAction?: (event : any) => void; 
 }
 
 class CampusCard extends React.Component<ICampusCardProps> {

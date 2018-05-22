@@ -19,7 +19,7 @@
   transition-duration: 0.1s; 
 }
 .cards *:hover {
-  box-shadow: 7.5px 5px 1px 1px; 
+  box-shadow: 1px 1px; 
 }
 .CampusCard
 {

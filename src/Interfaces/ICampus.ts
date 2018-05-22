@@ -1,4 +1,6 @@
-export interface ICampus {
+import INaviationLink from "./INavigationLink";
+
+export default interface ICampus {
     name : string;
     image : string;
     description? : string; 
@@ -6,5 +8,6 @@ export interface ICampus {
         longitude : number;
         latitude : number;
     };
+    navigationLinks : INaviationLink[]; 
 }
 

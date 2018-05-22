@@ -1,13 +1,17 @@
 import * as React from 'react';
 
 // Components
-import Menu from './Menu'; 
+import NavigationLink from './NavigationLink';
+
+// Custom interfaces 
+import INavigationLink from '../Interfaces/INavigationLink'; 
 
 interface ICampusProps 
 {
     image : string; 
     alt? : string;
     title : string; 
+    navigationLinks : INavigationLink[]; 
 }
 
 
@@ -23,9 +27,15 @@ class Campus extends React.Component<ICampusProps>
                 </div>
             </section>
             <section>
-                <Menu />
+                {this.renderNavigationLinks()}               
             </section>
         </div>
+    }
+    
+    private renderNavigationLinks() {
+        return this.props.navigationLinks.map(navigationLink => {
+            return <NavigationLink icon={navigationLink.icon} color={navigationLink.icon} link={navigationLink.link} key={navigationLink.link} />
+        });
     }
 }
 

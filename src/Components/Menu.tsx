@@ -14,7 +14,7 @@ class Menu extends React.Component
 
     private renderOptions()
     {
-        return "test"; 
+        return "Menu"; 
     }
 }
 

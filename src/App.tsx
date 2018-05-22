@@ -1,9 +1,6 @@
 import * as React from 'react';
 import './App.css';
 
-// TypeScript interfaces 
-import {ICampus as ICampus} from './Interfaces/ICampus'; 
-
 // components
 import Campus from "./Components/Campus"; 
 import CampusCard from "./Components/CampusCard"; 
@@ -14,15 +11,54 @@ import fjerdingen_image from "./Images/Campuses/fjerdingen.png";
 import kvadraturen_image from "./Images/Campuses/kvadraturen.png"; 
 import vulkan_image from "./Images/Campuses/vulkan.png"; 
 
-// import logo from './Images/logo.png'; // not used when header is not used
+// Custom interfaces 
+import ICampus from './Interfaces/ICampus';
 
 // all campuses in list
-const campuses: ICampus[] = 
-[
-    {name : 'Kvadraturen', image : kvadraturen_image},
-    {name: 'Fjerdingen', image: fjerdingen_image },
-    {name: 'Vulkan', image: vulkan_image }
-]
+const campuses: ICampus[] = [
+  {
+    image: kvadraturen_image,
+    name: "Kvadraturen",
+    navigationLinks: [
+      {
+        color: "#E60000",
+        icon: "train",
+        link:
+          "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30113707)Kirkegata 24 (Oslo)/etter/#st:0,sp:0,bp:0"
+      }
+    ]
+  },
+  {
+    image: fjerdingen_image,
+    name: "Fjerdingen",
+    navigationLinks: [
+      {
+        color: "#E60000",
+        icon: "train",
+        link:
+          "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30113707)Kirkegata 24 (Oslo)/etter/#st:0,sp:0,bp:0"
+      },
+      {
+        color: "#207fa2",
+        icon: "book",
+        link:
+          "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30113707)Kirkegata 24 (Oslo)/etter/#st:0,sp:0,bp:0"
+      }
+    ]
+  },
+  {
+    image: vulkan_image,
+    name: "Vulkan",
+    navigationLinks: [
+      {
+        color: "#E60000",
+        icon: "train",
+        link:
+          "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30121649)Vulkan 19 (Oslo)/etter/#st:0,sp:0,bp:0"
+      }
+    ]
+  }
+];
 
 
 class App extends React.Component 
@@ -64,7 +100,7 @@ class App extends React.Component
     return campuses.map(campus => 
     {
       return <div id={campus.name} className="campuses" key={campus.name}>
-          <Campus title={campus.name} image={campus.image} />
+        <Campus title={campus.name} image={campus.image} navigationLinks={campus.navigationLinks}/>
         </div>;
     })
   }

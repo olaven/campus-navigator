@@ -25,6 +25,17 @@ const campuses: ICampus[] = [
         icon: "train",
         link:
           "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30113707)Kirkegata 24 (Oslo)/etter/#st:0,sp:0,bp:0"
+      },
+      {
+        color: "#E60000",
+        icon: "coffee",
+        link:
+          "https://www.google.com/maps/search/kafeer+n%C3%A6r+kirkegata+24+oslo/@59.9135629,10.7423991,16z"
+      },
+      {
+        color: "#1737b8",
+        icon: "bicycle",
+        link: "https://oslobysykkel.no/en/map"
       }
     ]
   },
@@ -41,8 +52,12 @@ const campuses: ICampus[] = [
       {
         color: "#207fa2",
         icon: "book",
-        link:
-          "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30113707)Kirkegata 24 (Oslo)/etter/#st:0,sp:0,bp:0"
+        link: "http://biblioteket.kristiania.no/westerdals/"
+      },
+      {
+        color: "#1737b8",
+        icon: "bicycle",
+        link: "https://oslobysykkel.no/en/map"
       }
     ]
   },
@@ -55,6 +70,11 @@ const campuses: ICampus[] = [
         icon: "train",
         link:
           "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30121649)Vulkan 19 (Oslo)/etter/#st:0,sp:0,bp:0"
+      },
+      {
+        color: "#1737b8",
+        icon: "bicycle",
+        link: "https://oslobysykkel.no/en/map"
       }
     ]
   }

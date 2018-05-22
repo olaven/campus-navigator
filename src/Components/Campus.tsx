@@ -27,7 +27,9 @@ class Campus extends React.Component<ICampusProps>
                 </div>
             </section>
             <section>
-                {this.renderNavigationLinks()}               
+                <div className='navigationLinks'>
+                    {this.renderNavigationLinks()} 
+                </div>              
             </section>
         </div>
     }

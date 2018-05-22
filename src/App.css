@@ -51,3 +51,12 @@
 {
   height: 50vh;
 }
+
+
+.NavigationLink
+{
+  display: inline-block;
+  width: 33vw;
+  height: 10vh;
+  font-size: 3em; 
+}

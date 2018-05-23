@@ -10,7 +10,7 @@ interface INavigationLinkProps {
 class NavigationLink extends React.Component<INavigationLinkProps>
 {
     private styles = {
-        backgroundColor: this.props.color, 
+        color: this.props.color, 
     }
 
     public render() {

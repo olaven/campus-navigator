@@ -7,9 +7,11 @@ import CampusCard from "./Components/CampusCard";
 // import Header from './Components/Header'; // left out for now
 
 // images 
+import brenneriveien_image from "./Images/Campuses/brenneriveien.jpg"; 
 import fjerdingen_image from "./Images/Campuses/fjerdingen.png"; 
 import kvadraturen_image from "./Images/Campuses/kvadraturen.png"; 
 import vulkan_image from "./Images/Campuses/vulkan.png"; 
+
 
 // Custom interfaces 
 import ICampus from './Interfaces/ICampus';
@@ -64,7 +66,7 @@ const campuses: ICampus[] = [
     ]
   },
   {
-    color: "#502C78", 
+    color: "#502C78",
     image: vulkan_image,
     name: "Vulkan",
     navigationLinks: [
@@ -76,6 +78,24 @@ const campuses: ICampus[] = [
       },
       {
         color: "#1737b8",
+        icon: "bicycle",
+        link: "https://oslobysykkel.no/en/map"
+      }
+    ]
+  },
+  {
+    color: "#68789B",
+    image: brenneriveien_image,
+    name: "Brenneriveien",
+    navigationLinks: [
+      {
+        color: "#E60000",
+        icon: "train",
+        link:
+          "https://ruter.no/reiseplanlegger/Mellom/Fra/Min posisjon/til/(30121649)Vulkan 19 (Oslo)/etter/#st:0,sp:0,bp:0"
+      },
+      {
+        color: "#68789B",
         icon: "bicycle",
         link: "https://oslobysykkel.no/en/map"
       }

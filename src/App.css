@@ -11,33 +11,53 @@
 
 .cards
 {
-  display: flex; 
-  position: absolute; 
+  display: inline-block; 
   bottom: 40vh; 
 }
 .cards *{
   transition-duration: 0.1s; 
+  border-left-style: solid; 
+  border-left-width: 1px; 
 }
 .cards *:hover {
-  box-shadow: 1px 1px; 
+  border-left-width: 1em; 
 }
 .CampusCard
 {
-  width: 30vw; 
+  width: 20vw; 
   padding: 1.5vw; 
+  margin: 5vw; 
+}
+
+@media screen and (max-width: 800px)
+{
+  .cards
+  {
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; 
+  }
+  .cards *:hover {
+    border-left-width: 1px;
+    border-bottom-style: solid; 
+    border-bottom-width: 1em; 
+  }
+  .CampusCard
+  {
+    width: 100vw; 
+    margin: 1vh; 
+    margin-left: 0; 
+    margin-right: 0;  
+  }
 }
 
 .CampusCard, .CampusCard * 
 {
   /* Propagates click events to parent */ 
   pointer-events: none;
-}
-.CampusCard h2
-{
   font-size: 2.5em; 
-}
-.CampusCard img{
-  width: inherit; 
+  color: white; 
+
 }
 
 .Campus
@@ -51,12 +71,34 @@
 {
   height: 50vh;
 }
+.Campus section img
+  {
+    height: 20vw; 
+  }
 
+@media screen and (max-width: 800px)
+{
+  .Campus section img
+  {
+    width: 90vw; 
+  }
+}
 
 .NavigationLink
 {
   display: inline-block;
-  width: 33vw;
+  width: 20vw;
   height: 10vh;
-  font-size: 3em; 
+  font-size: 2em; 
+}
+
+@media screen and (max-width: 800px)
+{
+  .NavigationLink
+  {
+    display: flex; 
+    flex-direction: column; 
+    height: 10vh; 
+    margin: auto; 
+  }
 }

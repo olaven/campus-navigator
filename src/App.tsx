@@ -17,6 +17,7 @@ import ICampus from './Interfaces/ICampus';
 // all campuses in list
 const campuses: ICampus[] = [
   {
+    color: "#C9243F",
     image: kvadraturen_image,
     name: "Kvadraturen",
     navigationLinks: [
@@ -40,6 +41,7 @@ const campuses: ICampus[] = [
     ]
   },
   {
+    color: "#8D285C",
     image: fjerdingen_image,
     name: "Fjerdingen",
     navigationLinks: [
@@ -62,6 +64,7 @@ const campuses: ICampus[] = [
     ]
   },
   {
+    color: "#502C78", 
     image: vulkan_image,
     name: "Vulkan",
     navigationLinks: [
@@ -109,7 +112,7 @@ class App extends React.Component
     {
       return (
         <div onClick={this.onCardClicked} id={campus.name} key={campus.name}>
-          <CampusCard text={campus.name} image={campus.image} />
+          <CampusCard text={campus.name} color={campus.color} />
         </div>
       );
     });

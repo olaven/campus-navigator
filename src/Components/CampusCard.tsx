@@ -1,20 +1,19 @@
 import * as React from 'react';
 
-interface ICampusCardProps {
-    image: string;
-    alt?: string; 
-    text: string;
+interface ICampusCardProps 
+{
+    color : string; 
+    text : string;
     customClickAction?: (event : any) => void; 
 }
 
-class CampusCard extends React.Component<ICampusCardProps> {
-    public render() {
-        return (
-            <div className='CampusCard'>
-                <h2>{this.props.text}</h2>
-                <img src={this.props.image} alt={this.props.alt || "Image of Campus"}/>
-            </div>
-        );  
+class CampusCard extends React.Component<ICampusCardProps> 
+{
+    public render() 
+    {
+        return <div className='CampusCard' style={{backgroundColor : this.props.color}}>
+            {this.props.text}
+        </div>
     }
 }
 

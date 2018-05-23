@@ -5,12 +5,19 @@ interface INavigationLinkProps {
     icon : string; 
     color : string; 
     link : string; 
+    text? : string; 
 }
 
 class NavigationLink extends React.Component<INavigationLinkProps>
 {
-    private styles = {
-        color: this.props.color, 
+    private styles = 
+    {
+        color : this.props.color
+    }
+
+    private textStyles = 
+    {
+        fontSize: '1.5rem'
     }
 
     public render() {
@@ -18,6 +25,7 @@ class NavigationLink extends React.Component<INavigationLinkProps>
         return <a href={this.props.link} target="_blank" className='NavigationLink'>
             <div className='NavigationLink' style={this.styles}>
                 <i className={faClass} />
+                <p style={this.textStyles}>{this.props.text}</p>
             </div>
         </a>
     }

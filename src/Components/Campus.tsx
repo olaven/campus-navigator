@@ -39,7 +39,7 @@ class Campus extends React.Component<ICampusProps>
     
     private renderNavigationLinks() {
         return this.props.navigationLinks.map(navigationLink => {
-            return <NavigationLink icon={navigationLink.icon} color={navigationLink.icon} link={navigationLink.link} key={navigationLink.link} />
+            return <NavigationLink icon={navigationLink.icon} color={navigationLink.color} text={navigationLink.text} link={navigationLink.link} key={navigationLink.link} />
         });
     }
 }

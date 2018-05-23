@@ -8,6 +8,7 @@ import INavigationLink from '../Interfaces/INavigationLink';
 
 interface ICampusProps 
 {
+    color? : string; 
     image : string; 
     alt? : string;
     title : string; 
@@ -18,21 +19,23 @@ interface ICampusProps
 
 class Campus extends React.Component<ICampusProps> 
 {
-    public render() {
+
+    private styles =
+    {
+        textDecoration: 'underline',
+        textDecorationColor: this.props.color || 'white'
+    }
+
+    public render() 
+    {
         return <div className='Campus'>
-            <section>
-                <img src={this.props.image} alt={this.props.alt || 'Image of campus'}/>
-                <div>
-                    <h2>{this.props.title}</h2>
-                </div>
-            </section>
-            <section>
-                <div className='navigationLinks'>
-                    {this.renderNavigationLinks()} 
-                </div>              
-            </section>
+            <h2 style={this.styles}>{this.props.title}</h2>
+            <div className='navigationLinks'>
+                {this.renderNavigationLinks()} 
+            </div>   
         </div>
     }
+
     
     private renderNavigationLinks() {
         return this.props.navigationLinks.map(navigationLink => {

@@ -67,22 +67,15 @@
   height: 100vh;
   width: 100vw; 
 }
-.Campus section
+.Campus
 {
-  height: 50vh;
+  height: 100vh;
 }
-.Campus section img
-  {
-    height: 20vw; 
-  }
+.Campus h2
+{
+  font-size: 5em; 
+}
 
-@media screen and (max-width: 800px)
-{
-  .Campus section img
-  {
-    width: 90vw; 
-  }
-}
 
 .NavigationLink
 {

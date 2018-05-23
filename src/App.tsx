@@ -143,7 +143,7 @@ class App extends React.Component
     return campuses.map(campus => 
     {
       return <div id={campus.name} className="campuses" key={campus.name}>
-        <Campus title={campus.name} image={campus.image} navigationLinks={campus.navigationLinks}/>
+        <Campus title={campus.name} image={campus.image} navigationLinks={campus.navigationLinks} color={campus.color}/>
         </div>;
     })
   }

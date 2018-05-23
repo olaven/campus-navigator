@@ -78,6 +78,14 @@
 {
   font-size: 5em; 
 }
+@media screen and (max-width: 800px)
+{
+  .Campus h2
+  {
+    font-size: 3em; 
+    word-wrap: break-word; 
+  }
+}
 
 
 .NavigationLink
